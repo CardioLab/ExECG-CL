@@ -1,0 +1,5 @@
+v 3
+d execgcl.  Exercise ECG weighted clinical likelihood of coronary artery disease
+d Program by Samuel E Schmidt & Simon Winther
+f execgcl.ado
+f execgcl.sthlp
