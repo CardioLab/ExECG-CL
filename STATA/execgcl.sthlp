@@ -68,22 +68,22 @@ The {cmd:execgcl} command calculates Exercise ECG weighted clinical likelihood o
 	
 
 
-{pstd}  {com}. use https://vbn.aau.dk/files/331937080/synthetic_execgcl.dta
+{pstd}  {com}. use https://vbn.aau.dk/files/513117263/SyntheticExECGdata.dta
         {txt}(Synthetic dataset of patients with chronic coronary syndrome )
 		{p_end}
 
 
 {pstd}Run {cmd:execgcl} using data in memory  {p_end}
-{phang2}{cmd:. execgcl , male(sex) age(age) symp(symp_gr3) nb_rf(nb_rf_5 )  execg(calciumscoreagatston) }
+{phang2}{cmd:. execgcl , male(male_sex) age(age) symp(symp) nb_rf(nb_rf)  execg(execg) }
 
 {pstd}Run command, specifying the variable suffix {p_end}
-{phang2}{cmd:. execgcl , male(sex) age(age) symp(symp_gr3) nb_rf(nb_rf_5 )  execg(calciumscoreagatston) suffix("_newStudy")}
+{phang2}{cmd:. execgcl , male(male_sex) age(age) symp(symp) nb_rf(nb_rf)  execg(execg) suffix("_newStudy")}
 
 {pstd}Run {cmd:execgcl} using data in memory and replace existing estimates{p_end}
-{phang2}{cmd:. execgcl , male(sex) age(age) symp(symp_gr3) nb_rf(nb_rf_5 )  execg(calciumscoreagatston) replace }
+{phang2}{cmd:. execgcl , male(male_sex) age(age) symp(symp) nb_rf(nb_rf)  execg(execg) replace }
 
 {pstd}Run {cmd:execgcl} using data in memory, replace existing estimates and estimates the clinical likelihood groups  {p_end}
-{phang2}{cmd:. execgcl , male(sex) age(age) symp(symp_gr3) nb_rf(nb_rf_5 )  execg(calciumscoreagatston) replace  grp}
+{phang2}{cmd:. execgcl , male(male_sex) age(age) symp(symp) nb_rf(nb_rf)  execg(execg) replace  grp}
 
 
 
@@ -108,13 +108,9 @@ The {cmd:execgcl} command calculates Exercise ECG weighted clinical likelihood o
 to the research community, like a paper. Please cite it as such: {p_end}
 
 {p 4 8 2}{it}
-Schmidt SE, Rasmussen LD & Winther S (2023). execgcl: Stata module for calculating Clinical likelihood of coronary artery disease, github.com/CardioLab/execgcl  {p_end} {reset}
+Schmidt SE, Rasmussen LD & Winther S (2023). execgcl: Stata module for calculating Exercise ECG weighted clinical likelihood of coronary artery disease, github.com/CardioLab/execgcl  {p_end} {reset}
 
-{pstd} And please cite it the orginal reseasch paper when this is published : {p_end}
-{p 4 8 2}
 
-{pstd} {it} Rasmussen LD. Incorporating Exercise Electrocardiogram into Pre-Test Assessment of the Likelihood of Coronary Artery Disease, TOCOME {p_end}
-{p 4 8 2}
 
    {hline}
 {title:Authors}
